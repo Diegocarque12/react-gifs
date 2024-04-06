@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function AddCategory({ onAddCategory }) {
+export const AddCategory = ({ onAddCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = ({ target }) => {
@@ -28,4 +28,4 @@ export default function AddCategory({ onAddCategory }) {
       {/* <button type="submit">Agregar</button> */}
     </form>
   );
-}
+};
