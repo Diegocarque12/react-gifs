@@ -25,6 +25,10 @@ export const AddCategory = ({ onAddCategory }) => {
         onChange={onInputChange}
         placeholder="Buscar Gifs"
       />
+      <button></button>
+      <button></button>
+      <h1>dereck tragon</h1>
+      <h1>credinalgas</h1>
       {/* <button type="submit">Agregar</button> */}
     </form>
   );
