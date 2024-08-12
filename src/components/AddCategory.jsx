@@ -16,16 +16,34 @@ export const AddCategory = ({ onAddCategory }) => {
   };
 
   return (
-    <form onSubmit={(event) => onSubmit(event)}>
+    <form onSubmit={(event) => onSubmit(event)} className="add-category-form">
       <input
         type="text"
-        name=""
-        id=""
+        name="category"
+        id="category-input"
         value={inputValue}
         onChange={onInputChange}
         placeholder="Buscar Gifs"
+        className="category-input"
+        autoComplete="off"
       />
-      {/* <button type="submit">Agregar</button> */}
+      <button type="submit" className="submit-button">Agregar</button>
+      <div className="input-info">
+        <p>Ingrese una categoría para buscar GIFs</p>
+        <span className="char-count">{inputValue.length}/50</span>
+      </div>
+      <div className="recent-searches">
+        <h4>Búsquedas recientes:</h4>
+        <ul>
+          <li>Gatos</li>
+          <li>Perros</li>
+          <li>Memes</li>
+        </ul>
+      </div>
     </form>
   );
+};
+
+AddCategory.propTypes = {
+  onAddCategory: PropTypes.func.isRequired,
 };
